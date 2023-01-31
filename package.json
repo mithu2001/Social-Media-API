@@ -1,0 +1,19 @@
+{
+  "name": "social-media-api",
+  "version": "1.0.0",
+  "description": "Social Media API using MongoDB, Express, Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mithu2001/Social-Media-API.git"
+  },
+  "author": "Mithu Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mithu2001/Social-Media-API/issues"
+  },
+  "homepage": "https://github.com/mithu2001/Social-Media-API#readme"
+}
