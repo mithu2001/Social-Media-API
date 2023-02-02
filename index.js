@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const userRoute = require('../Social-Media-Api/Routes/userRoute')
 const authRoute = require('../Social-Media-Api/Routes/authRoute')
+const postRoute = require('../Social-Media-Api/Routes/postRoute');
 
 
 const app = express();
@@ -22,6 +23,7 @@ app.use(morgan("common"));
 //Routers
 app.use('/api/users',userRoute);
 app.use('/api/auth',authRoute);
+app.use('/api/posts',postRoute);
 
 app.listen(7000, ()=>{
     console.log("Server Created");
