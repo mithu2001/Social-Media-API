@@ -25,6 +25,8 @@ app.use('/api/users',userRoute);
 app.use('/api/auth',authRoute);
 app.use('/api/posts',postRoute);
 
-app.listen(7000, ()=>{
+
+const PORT = process.env.PORT
+app.listen(PORT, ()=>{
     console.log("Server Created");
 })
