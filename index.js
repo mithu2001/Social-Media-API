@@ -21,6 +21,10 @@ app.use(helmet());
 app.use(morgan("common"));
 
 //Routers
+app.get('/',(req,res)=>{
+  res.send("Rest API https://socialmediaapi-tui7.onrender.com/api ,  /users, /users/id ,/posts ");
+});
+
 app.use('/api/users',userRoute);
 app.use('/api/auth',authRoute);
 app.use('/api/posts',postRoute);
