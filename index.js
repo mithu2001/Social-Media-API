@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const userRoute = require('../Social-Media-Api/Routes/userRoute')
-const authRoute = require('../Social-Media-Api/Routes/authRoute')
-const postRoute = require('../Social-Media-Api/Routes/postRoute');
+const userRoute = require('./Routes/userRoute')
+const authRoute = require('./Routes/authRoute')
+const postRoute = require('./Routes/postRoute');
 
 
 const app = express();
