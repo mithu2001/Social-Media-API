@@ -40,12 +40,25 @@ router.delete('/:id',async (req,res)=>{
     }
 })
 
-//get a user
+//get single user details
 router.get('/:id', async (req,res)=>{
     try{
         const user = await User.findById(req.params.id);
         const {password,updatedAt,createdAt, ...other} = user._doc;
         res.status(200).json(other);
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
+//get all user details 
+
+router.get('/', async (req,res)=>{
+    try{
+        const user = await User.find();
+        // const {password,updatedAt,createdAt, ...other} = user._doc;
+        
+        res.status(200).json(user);
     }catch(err){
         res.status(500).json(err);
     }
