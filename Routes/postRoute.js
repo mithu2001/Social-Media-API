@@ -64,10 +64,20 @@ router.put('/:id/like', async (req,res)=>{
     }
 })
 
-//get a post
+//get single  post
 router.get('/:id', async (req,res)=>{
     try{
         const post =await Post.findById(req.params.id);
+        res.status(200).json(post);
+    }catch(err){
+        res.status(200).json(err);
+    }
+})
+
+//get all posts
+router.get('/', async (req,res)=>{
+    try{
+        const post =await Post.find();
         res.status(200).json(post);
     }catch(err){
         res.status(200).json(err);
